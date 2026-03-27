@@ -10,19 +10,13 @@ class TrackListItem extends StatelessWidget {
   static const List<CNPopupMenuEntry> _menuItems = [
     CNPopupMenuItem(
       label: 'Play Next',
-      icon: CNSymbol(
-        'text.line.first.and.arrowtriangle.forward',
-        size: 16,
-      ),
+      icon: CNSymbol('text.line.first.and.arrowtriangle.forward', size: 16),
     ),
     CNPopupMenuItem(
       label: 'Add to Playlist',
       icon: CNSymbol('text.badge.plus', size: 16),
     ),
-    CNPopupMenuItem(
-      label: 'Favorite',
-      icon: CNSymbol('star', size: 16),
-    ),
+    CNPopupMenuItem(label: 'Favorite', icon: CNSymbol('star', size: 16)),
     CNPopupMenuDivider(),
     CNPopupMenuItem(
       label: 'Share',
@@ -30,11 +24,7 @@ class TrackListItem extends StatelessWidget {
     ),
     CNPopupMenuItem(
       label: 'Remove',
-      icon: CNSymbol(
-        'trash',
-        size: 16,
-        color: CupertinoColors.systemRed,
-      ),
+      icon: CNSymbol('trash', size: 16, color: CupertinoColors.systemRed),
     ),
   ];
 
@@ -48,13 +38,8 @@ class TrackListItem extends StatelessWidget {
       title: Text(track.title),
       subtitle: Text(track.subtitle),
       trailing: CNPopupMenuButton.icon(
-        buttonIcon: CNSymbol(
-          'ellipsis.circle',
-          size: 20,
-          color: accentColor,
-        ),
+        buttonIcon: CNSymbol('ellipsis.circle', size: 20, color: accentColor),
         size: 32,
-        buttonStyle: CNButtonStyle.gray,
         preserveTopToBottomOrder: true,
         items: _menuItems,
         onSelected: (_) {},
